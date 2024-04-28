@@ -1,0 +1,5 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+/* the input file is where you write your CSS code including Tailwind CSS classes, while the output file is where the compiled CSS code will be saved after processing by Tailwind CSS */
