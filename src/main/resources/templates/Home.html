@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" data-th-href="@{'/CSS/output.css'}" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" /><!-- For Light/Dark Mode -->
+
 </head>
 <body>
-    <div class="container">
-    <h1 data-th-text="${name}">Welcome to Java Gate</h1>
-    <p>LinkedIn : <span data-th-text="${LinkedIn}"></span></p>
-    <P>Github Link : <span data-th-text="${Github}"></span></P>
+    <div class="bg-gray-200 w-1/2 p-4 flex flex-col space-y-3 mx-auto justify-center items-center">
+    <h1 class="text-2xl font-bold" data-th-text="${name}">Welcome to Java Gate</h1>
+    <p class="text-xl text-gry-700">LinkedIn : <span data-th-text="${LinkedIn}"></span></p>
+    <P>Github : <span data-th-text="${Github}"></span></P>
     <a data-th-href="${Github}">Click Here to open</a>
 
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt provident possimus, doloremque id at accusamus, 
@@ -22,15 +25,12 @@
         incidunt consequuntur magni nulla saepe. Tempora voluptate modi ducimus. Deserunt quia cupiditate, aspernatur, harum 
         impedit obcaecati pariatur porro consequatur, illo quae dignissimos eligendi! Cupiditate quo, ex iusto voluptates dolores 
         nam repellendus ut repudiandae distinctio, eligendi, reiciendis expedita tempora sunt fuga labore exercitationem dolor 
-        dolorum libero quos nihil amet quam beatae. Consequatur, amet a. Molestias sunt in, laboriosam illo consequuntur laudantium, 
-        totam hic eius assumenda quibusdam cum rerum neque atque iusto maiores necessitatibus tempora ullam nulla, incidunt quos 
-        alias voluptate nihil. Magni expedita omnis iusto neque error debitis commodi temporibus nostrum repellat rerum consequatur, 
-        sapiente fugiat possimus vitae ipsum quos ducimus ipsa fugit pariatur est ea! Tenetur officiis numquam molestias laudantium 
-        nostrum quas rem harum sapiente iusto est nobis libero error asperiores eveniet possimus, velit dignissimos voluptatem 
-        impedit quia ratione ipsa. Deleniti quibusdam quae voluptatibus provident ab, ipsum aut tempore, quos, mollitia non voluptate
-         necessitatibus minus ipsa ex consequatur hic sint maiores. Quos nobis at quisquam, aut harum sint soluta officia iure 
-         perspiciatis aliquam voluptas laudantium deleniti expedita ut consectetur est quaerat impedit. Tenetur voluptas laboriosam 
+        dolorum libero quos nihil amet quam beatae.
     </p>
+    <div>
+        <button class="px-3 py-3 rounded bg-blue-700 text-white hover:bg-blue-600">Click Here</button>
+    </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script><!-- For Light/Dark Mode -->
 </body>
 </html>

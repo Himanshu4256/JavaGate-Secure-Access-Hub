@@ -11,9 +11,20 @@ public class UiController {
 
     @GetMapping("/home")
     public String home(Model model) {
-        model.addAttribute("name", "Java Gate");
+        model.addAttribute("name", "Java Gate : Secure Access Hub");
         model.addAttribute("LinkedIn", "in/himanshu-sharma-8b5561231");
         model.addAttribute("Github", "https://github.com/Himanshu4256");
         return "Home";
     }
+
+    @GetMapping("/services")
+    public String aboutPage() {
+        return "about";
+    }
+
+    @GetMapping("/services")
+    public String servicesPages() {
+        return "services";
+    }
+
 }
