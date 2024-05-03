@@ -17,7 +17,7 @@ public class UiController {
         return "Home";
     }
 
-    @GetMapping("/services")
+    @GetMapping("/about")
     public String aboutPage() {
         return "about";
     }

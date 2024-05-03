@@ -8,6 +8,6 @@
 <body>
     <h1>About Page</h1>
     <!-- using fragment -->
-    <div th:insert="~{base :: parent}"></div>
+    <div class="host-tag" th:replace="~{base :: parent('one','two')}"></div>
 </body>
 </html>

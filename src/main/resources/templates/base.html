@@ -1,4 +1,6 @@
-<div th:fragment="parent">
+<div th:fragment="parent-fragment" th:fragment="parent(x,y)">
     <h1>This is parent fragment</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sit?</p>
+    <h1>Value of X is <span th:text="${x}"></span></h1>
+    <h1>Value of Y is <span th:text="${y}"></span></h1>
 </div>
