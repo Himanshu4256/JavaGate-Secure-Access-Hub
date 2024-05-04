@@ -18,7 +18,8 @@ public class UiController {
     }
 
     @GetMapping("/about")
-    public String aboutPage() {
+    public String aboutPage(Model model) {
+        model.addAttribute("isLogin", false);
         return "about";
     }
 

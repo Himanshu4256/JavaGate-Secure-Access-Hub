@@ -1,13 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <h1>Services Page</h1>
+    <h1>Welcome to Services Page</h1>
+    <hr>
     <!-- using fragment -->
-    <div class="host-tag" th:replace="~{base :: parent('Services one','Services two')}"></div>
+    <!-- <div class="host-tag" th:replace="~{base :: parent('Services one','Services two')}"></div> -->
+    <div th:replace="~{base :: parent(~{::.third_content})}"> 
+    <section id = "main_content">
+        <h1>First Page</h1>
+        <h2>Services offered by Me</h2>
+    </section>
+    <section id = "second_content">
+        <h1>Second Page</h1>
+        <h2>Services offered by Me</h2>
+    </section>
+    <section class = "third_content">
+        <h1>Third Page</h1>
+        <h2>Services offered by Me</h2>
+    </section>
+    </div>
+    <script>
+        console.log("services page")
+    </script>
 </body>
 </html>
