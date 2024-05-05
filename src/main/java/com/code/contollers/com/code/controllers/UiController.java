@@ -24,8 +24,23 @@ public class UiController {
     }
 
     @GetMapping("/services")
-    public String servicesPages() {
+    public String servicesPage() {
         return "services";
+    }
+
+    @GetMapping("/login")
+    public String loginPage() {
+        return "login";
+    }
+
+    @GetMapping("/signup")
+    public String signupPage() {
+        return "signup";
+    }
+
+    @GetMapping("/contact")
+    public String contactPage() {
+        return "contact";
     }
 
 }

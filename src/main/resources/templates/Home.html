@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" data-th-href="@{'/CSS/output.css'}" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" /><!-- For Light/Dark Mode -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" /><!-- For Light/Dark Mode --
 
 </head>
 <body>
@@ -31,6 +31,24 @@
         <button class="px-3 py-3 rounded bg-blue-700 text-white hover:bg-blue-600">Click Here</button>
     </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script><!-- For Light/Dark Mode -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+    <div id="content">
+        <h1>Home Page</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, aliquam.
+        </p>
+    </div>
+    <script>
+        console.log("home page");
+    </script>
 </body>
 </html>

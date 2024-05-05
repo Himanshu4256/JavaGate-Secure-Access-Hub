@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en" >
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <h1>Welcome to Services Page</h1>
     <hr>
     <!-- using fragment -->
-    <!-- <div class="host-tag" th:replace="~{base :: parent('Services one','Services two')}"></div> -->
+    <!-- <div class="host-tag" th:replace="~{base :: parent('Services one','Services two')}"></div> --
     <div th:replace="~{base :: parent(~{::.third_content})}"> 
     <section id = "main_content">
         <h1>First Page</h1>
@@ -26,6 +26,22 @@
     </div>
     <script>
         console.log("services page")
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+<head>
+    <title>Services Page</title>
+</head>
+<body>
+    <section id="content" >
+        <h1>Welcome to servvice page</h1>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quia.</h2>
+    </section>
+    <script>
+        console.log("services page");
     </script>
 </body>
 </html>
