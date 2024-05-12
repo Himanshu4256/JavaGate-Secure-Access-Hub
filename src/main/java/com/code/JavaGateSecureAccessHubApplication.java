@@ -8,7 +8,7 @@ public class JavaGateSecureAccessHubApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(JavaGateSecureAccessHubApplication.class, args);
-        System.err.println("============================");
+        System.err.println("=============started============");
     }
 
 }

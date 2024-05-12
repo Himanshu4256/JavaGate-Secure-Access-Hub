@@ -1,0 +1,2 @@
+# tailwind css Rebuilding cammand
+npx tailwindcss -i src/main/resources/static/CSS/input.css -o src/main/resources/static/CSS/output.css  --watch
