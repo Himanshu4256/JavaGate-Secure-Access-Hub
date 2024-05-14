@@ -1,14 +1,23 @@
 package com.code.contollers.com.code.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.code.entities.User;
+import com.code.forms.UserForm;
+import com.code.services.UserService;
 
 @Controller
 @RequestMapping("pages")
 public class UiController {
+
+    @Autowired
+    private UserService userService;
 
     @GetMapping("/home")
     public String home(Model model) {
@@ -34,9 +43,27 @@ public class UiController {
         return "login";
     }
 
-    @PostMapping("/do-register")
-    public String signupPage() {
+    @GetMapping("/register")
+    public String singup(Model model) {
+        UserForm userForm = new UserForm();
+        model.addAttribute("userForm", userForm);
+        userForm.setName("Himanshu");
         return "signup";
+    }
+
+    @PostMapping("/do-register")
+    public String signupProcessing(@ModelAttribute UserForm form) {
+        User user = User.builder()
+                .name(form.getName())
+                .email(form.getEmail())
+                .password(form.getPassword())
+                .about(form.getAbout())
+                .profilePic(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjdLBPtVBiGPQ4LrKanWvkPFbQTTcnvGoOEg&s")
+                .build();
+
+        User savedUser = userService.saveUser(user);
+        return "redirect:/register";
     }
 
     @GetMapping("/contact")
