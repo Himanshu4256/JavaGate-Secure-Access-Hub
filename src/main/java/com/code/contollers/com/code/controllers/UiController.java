@@ -13,7 +13,7 @@ import com.code.forms.UserForm;
 import com.code.services.UserService;
 
 @Controller
-@RequestMapping("pages")
+// @RequestMapping("pages")
 public class UiController {
 
     @Autowired
@@ -51,7 +51,7 @@ public class UiController {
         return "signup";
     }
 
-    @PostMapping("/do-register")
+    @PostMapping("/register")
     public String signupProcessing(@ModelAttribute UserForm form) {
         User user = User.builder()
                 .name(form.getName())
@@ -63,7 +63,7 @@ public class UiController {
                 .build();
 
         User savedUser = userService.saveUser(user);
-        return "redirect:/register";
+        return "register";
     }
 
     @GetMapping("/contact")
